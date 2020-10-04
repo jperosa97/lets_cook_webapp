@@ -6,7 +6,7 @@ Das ist mein Studenten Projekt, wo ich eine Webapp programmiere, meine App wird 
 
   - HTML
   - CSS
-  - JAVASCRIPT
+  - JAVASCRIPT / ejs
   - PHP
   
 # Api
