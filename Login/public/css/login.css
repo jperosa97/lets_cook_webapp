@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+	box-sizing: border-box;
+}
+
+body {
+    /*font-family: 'MADE Sunflower' sans-serif;*/
+    background-color: #1E272E;
+}
+/*Navigation*/
+header {
+    width: 100%;
+}
+header .navi {
+	width: 95%;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: 0.6s;
+	padding: 40px 100px;
+	position: fixed;
+}
+header .navi.sticky {
+    height: 90px;
+    width: 100%;
+	padding: 5px 100px;
+	background: #f1f2f6;
+
+}
+header .navi.sticky a{
+    color: #1E272E;
+}
+header .navi.sticky .firmen_name {
+    color: #1E272E;
+}
+
+.navi ul {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.navi ul li {
+	list-style: none;
+	position: relative;
+}
+
+ul li a:hover {
+	color: #E31B6D;
+}
+.navi ul li a {
+	position: relative;
+	margin: 0 50px;
+	font-size: 27px;
+	text-decoration: none;
+	color: #F1F2F6;
+}
+header .navi .firmen_name{
+    color: #F1F2F6;
+}
+header .title_bild {
+    width: 100%;
+    height: 854px;
+    opacity: 56%;
+}
+
+header h2 {
+	position: absolute;
+    top: 4em;
+    left: 5em;
+    height: 10%;
+    width: 30%;
+    color: #F1F2F6;
+    font-size: 45px;
+}
+header form {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+    top: 5em;
+    left: 15em;
+    height: 10%;
+    width: 30%;
+    color: #F1F2F6;
+    font-size: 45px;
+}
+header form .usn-style label {
+    position: absolute;
+    top: 2em;
+    font-size: 30px;
+}
+
+header form .usn-style input {
+    position: absolute;
+    height: 50%;
+    top: 5em;
+    width: 60%;
+    background-color: rgba(241,242,246, 0.4);
+    font-size: 20px;
+    border-radius: 10px;
+    border-style: none;
+    padding: 8px;
+    color: #1E272E;
+    outline: none;
+}
+
+   header form .pwd1-style label {
+	position: absolute;
+	top: 6em;
+	font-size: 30px;
+   }
+   header form .pwd1-style input {
+	   position: absolute;
+	   height: 50%;
+	   top: 11em;
+	   width: 60%;
+	   background-color: rgba(241,242,246, 0.4);
+	   font-size: 20px;
+	   border-radius: 10px;
+	   border-style: none;
+	   padding: 8px;
+	   color: #1E272E;
+	   outline: none;
+   }
+header form .button {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        top: 7em;
+        position: absolute;
+    }
+   header form .button .btn{
+	height: 50%;
+	width: 100%;
+	background-color: rgba(241,242,246, 0.4);
+	font-size: 20px;
+	border-radius: 10px;
+	border-style: none;
+	padding: 8px;
+	color: #1E272E;
+	outline: none;
+	cursor: pointer;
+}
+header form .button .btn:hover{
+	background-color: rgba(0,148,50, 0.4);
+	color: #f1f2f6;
+}
+header form .button_regi .btn{
+	position: absolute;
+	top: 25em;
+	height: 50%;
+	width: 60%;
+	background-color: rgba(241,242,246, 0.4);
+	font-size: 20px;
+	border-radius: 10px;
+	border-style: none;
+	padding: 8px;
+	color: #1E272E;
+	outline: none;
+	cursor: pointer;
+}
+header form .button_regi .btn:hover{
+	background-color: rgba(0,148,50, 0.4);
+	color: #f1f2f6;
+}
+header form .button .btn_regi{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0,148,50, 0.4);
+	font-size: 20px;
+	top: 3em;
+	border-radius: 10px;
+	border-style: none;
+	padding: 8px;
+	color: #1E272E;
+	color: #f1f2f6;
+	cursor: pointer;
+}
+header form .button a {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+header form .button .btn_regi:hover{
+	color: #1E272E;
+	background-color: rgba(241,242,246, 0.4);
+}
+
+section{
+    height: 900px;
+}

@@ -1,0 +1,29 @@
+{
+  "name": "lets_cook_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "code.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jperosa97/Cook_rezept_node.js.git"
+  },
+  "author": "Janick Perosa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jperosa97/Cook_rezept_node.js/issues"
+  },
+  "homepage": "https://github.com/jperosa97/Cook_rezept_node.js#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "http-server": "^0.12.3",
+    "node-modules": "^1.0.1",
+    "response": "^0.18.0",
+    "unirest": "^0.6.0"
+  }
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs') %>
+</head>
+<body>
+        <header>
+          <%- include('./partials/navi.ejs') %>
+      </header>
+      <main id="searchPage">
+        <form class="search-form" action="/result" method="post">
+          <input class="textInput" type="text" name="search" placeholder="Search for Recipe" required>
+          <fieldset id="checks">
+            <div class="prefs">
+              <h1>Allergien <i id="allgien" class="fas fa-allergies"></i></h1>
+            </div>
+            <label><input type="checkbox" name="glutenIntolerance" value="gluten" id="gluten"/> Gluten</label>
+            <label><input type="checkbox" name="dairyIntolerance" value="dairy Free" id="dairy" /> Dairy Free</label>
+            <div class="prefs1">
+              <h1>Diät <i id="diaet" class="fas fa-seedling"></i></h1>
+            </div>
+          <label><input type="checkbox" name="paleoIntolerance" value="paleo" id="paleo" /> Paleo</label>
+          <label><input type="checkbox" name="veganIntolerance" value="vegan" id="vegan"/> Vegan</label>
+          <label><input type="checkbox" name="ketoIntolerance" value="ketogenic" id="keto" /> Ketogenic</label>
+          <label><input type="checkbox" name="vegetarianIntolerance" value="vegetarian" id="vegetarian" /> Vegetarian</label>
+          <label><input type="checkbox" name="pescatarianIntolerance" value="pescatarian" id="pescatarian"/> Pescatarian</label>
+          </fieldset>
+          <button id="searchButton" type="submit">Search <i class="fas fa-search" id="search-icon"></i></button>
+        </form>
+        <form class="search-form" action="/random" method="GET">
+          <button id="random" type="submit">Random Recipe!</button>
+        </form>
+      </main>
+  
+      </script>
+</body>
+</html>

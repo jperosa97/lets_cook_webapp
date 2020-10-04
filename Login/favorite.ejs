@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mein Favoriten</h1>
+    <main>
+        <h2 id="pageTitle">Saved Recipes</h2>
+        <% if (!savedResults) { %>
+          <h3>No Saved Recipes</h3>
+          <a href="/random"><h5>Click Here to see a random recipe!</h5></a>
+        <% } %>
+        <% if (savedResults) { %>
+          <% savedResults.forEach(result => { %>
+            <a href="/recipe/<%= result.recipe_id %>"><section id= "results" recipe_id="<%= result.recipe_id %>" class="search_recipe">
+              <img src="<%= result.image %>"/>
+              <h3 id="saved_name"> <%= result.name %> </h3> 
+            </section></a>
+          <% }) %>
+        <% } %>
+      </main>
+</body>
+</html>
