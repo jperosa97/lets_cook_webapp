@@ -7,7 +7,7 @@
 
 body {
     /*font-family: 'MADE Sunflower' sans-serif;*/
-    background-color: #1E272E;
+    background-color: #1A202C;
 }
 /*Navigation*/
 header {
@@ -29,7 +29,7 @@ header .navi.sticky {
     height: 90px;
     width: 100%;
 	padding: 5px 100px;
-	background: #f1f2f6;
+	background:#EDF2F7;
 
 }
 header .navi.sticky a{
@@ -148,24 +148,24 @@ h3{
 	color: #f1f2f6;
 }
 #checks {
+	display: flex;
 	margin-top: 1em;
 	margin-bottom: 1em;
 	border: none;
 	color: white;
-	font-size: 20px;
+	font-size: 26px;
   }
 .prefs1 {
 	margin-top: 25px;
+	font-size: 25px;
 }
-  .prefs #allgien{
-	  color: #cc8e35;
-	  font-size: 35px;
+.prefs {
+	font-size: 25px;
+}
+ .icons{
+	 width: 35px;
   }
 
-  .prefs1 #diaet {
-	  color: #27ae60;
-	  font-size: 35px;
-  }
   #searchPage .search-form .textInput {
 	background-color: rgba(241,242,246, 0.4);
 	font-size: 20px;
@@ -183,7 +183,7 @@ h3{
 		width: 100%;
 		display: flex;
 		position: absolute;
-		top: 15em;
+		top: 10em;
 		flex-direction: column;
 		align-items: center;
   }

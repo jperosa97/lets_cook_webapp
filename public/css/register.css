@@ -38,6 +38,13 @@ header .navi.sticky a{
 header .navi.sticky .firmen_name {
     color: #1E272E;
 }
+#error {
+	color: red;
+    position: absolute;
+    top: 11em;
+    left: 34em;
+    font-size: 20px;
+}
 
 .navi ul {
 	position: relative;

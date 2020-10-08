@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <%- include('./partials/head.ejs') %>
-</head>
+  <%- include('./partials/head.ejs') %>
 <body>
-        <header>
+    <header>
           <%- include('./partials/navi.ejs') %>
-      </header>
+    </header>
       <main id="searchPage">
         <form class="search-form" action="/result" method="post">
           <input class="textInput" type="text" name="search" placeholder="Search for Recipe" required>
           <fieldset id="checks">
             <div class="prefs">
-              <h1>Allergien <i id="allgien" class="fas fa-allergies"></i></h1>
+              <h1>Allergien</h1>
             </div>
-            <label><input type="checkbox" name="glutenIntolerance" value="gluten" id="gluten"/> Gluten</label>
-            <label><input type="checkbox" name="dairyIntolerance" value="dairy Free" id="dairy" /> Dairy Free</label>
+            <label><input type="checkbox" name="glutenIntolerance" value="gluten" id="gluten"/> Gluten <img class="icons" src="/assets/Icons/gluten.png" alt="gluten"></label>
+            <label><input type="checkbox" name="dairyIntolerance" value="dairy Free" id="dairy" /> Dairy Free <img class="icons" src="/assets/Icons/molkerei.png" alt="milk_free"></label>
             <div class="prefs1">
-              <h1>Diät <i id="diaet" class="fas fa-seedling"></i></h1>
+              <h1>Diät</h1>
             </div>
-          <label><input type="checkbox" name="paleoIntolerance" value="paleo" id="paleo" /> Paleo</label>
-          <label><input type="checkbox" name="veganIntolerance" value="vegan" id="vegan"/> Vegan</label>
-          <label><input type="checkbox" name="ketoIntolerance" value="ketogenic" id="keto" /> Ketogenic</label>
-          <label><input type="checkbox" name="vegetarianIntolerance" value="vegetarian" id="vegetarian" /> Vegetarian</label>
-          <label><input type="checkbox" name="pescatarianIntolerance" value="pescatarian" id="pescatarian"/> Pescatarian</label>
+          <label><input type="checkbox" name="paleoIntolerance" value="paleo" id="paleo" /> Paleo <img class="icons" src="/assets/Icons/paleo.png" alt="Paleo Diät"></label>
+          <label><input type="checkbox" name="veganIntolerance" value="vegan" id="vegan"/> Vegan <img class="icons" src="/assets/Icons/vegan.png" alt="Vegan"></label>
+          <label><input type="checkbox" name="ketoIntolerance" value="ketogenic" id="keto" /> Ketogenic <img class="icons" src="/assets/Icons/ketogene-diaet.png" alt="Ketogenic Diät"></label></label>
+          <label><input type="checkbox" name="vegetarianIntolerance" value="vegetarian" id="vegetarian" /> Vegetarian <img class="icons" src="/assets/Icons/vegi.png" alt="vegetarian"></label></label>
+          <label><input type="checkbox" name="pescatarianIntolerance" value="pescatarian" id="pescatarian"/> Pescatarian <img class="icons" src="/assets/Icons/fisch.png" alt=" Pescatarian Diät"></label></label>
           </fieldset>
           <button id="searchButton" type="submit">Search <i class="fas fa-search" id="search-icon"></i></button>
         </form>

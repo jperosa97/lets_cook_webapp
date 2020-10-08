@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+	box-sizing: border-box;
+}
+.ueberUns {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	top: 15em;
+    width: 100%;
+}
+
+.ueberUns h1 {
+	color: #f1f2f6;
+	display: flex;
+	justify-content: center;
+}
+
+.ueberUns p {
+	color: #f1f2f6;
+	width: 30vw;
+	height: 30vh;
+	position: relative;
+    left: 33em;
+	top: 4em;
+	font-size: 17px;
+}
+
+.ueberUns main {
+	display: flex;
+	flex-direction: row;
+	height: 20vh;
+	justify-content: center;
+}
+
+.ueberUns main #icons {
+	width: 17%;
+}
+
+.ueberUns main #icons img {
+	width: 80%;
+	margin-left: 5em;
+}
+
+.ueberUns main .logo {
+	width: 12vw;
+	height: 20vh;
+	margin-left: 5em;
+
+}

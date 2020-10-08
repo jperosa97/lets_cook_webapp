@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+    <body>
+        <header>
+          <%- include('./partials/navi.ejs') %>
+        <img class="title_bild" src="/assets/images/lg_rg_bild.jpg" alt="">
+        <h2>Registriere dich bei let's Cook</h2>
+        
+        <% if(typeof message!= "undefined" && message) { %>
+            <h4 id="error"><%= message %></h2>
+        <% } %>  
+        <form action="/auth/register" method="POST">
+            <div class="usn-style">
+                <label for="name">Username</label>
+                <input type="text" name="username" id="userName">
+            </div>
+            <div class="email-style">
+                <input type="email" name="email" id="email">
+                <label for="email">Email</label>
+            </div>
+            <div class="pwd-style">
+                <input type="password" name="password" id="password">
+                <label for="password">Password</label>
+            </div>
+            <div class="pwd-style2">
+                <input type="password" name="passwordConform" id="password">
+                <label for="passwordConform">Password wiederholen </label>
+            </div>
+            <div class="button_regi">
+                <button type="submit" name="submit" class="btn">Registrieren</button>
+            </div>
+        </form>
+    </header>
+</body>
+</html>
