@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <%- include('./partials/head.ejs') %>
 </head>
 <body>
-    <h1>Mein Favoriten</h1>
-    <main>
-        <h2 id="pageTitle">Saved Recipes</h2>
-        <% if (!savedResults) { %>
-          <h3>No Saved Recipes</h3>
-          <a href="/random"><h5>Click Here to see a random recipe!</h5></a>
-        <% } %>
-        <% if (savedResults) { %>
-          <% savedResults.forEach(result => { %>
-            <a href="/recipe/<%= result.recipe_id %>"><section id= "results" recipe_id="<%= result.recipe_id %>" class="search_recipe">
-              <img src="<%= result.image %>"/>
-              <h3 id="saved_name"> <%= result.name %> </h3> 
-            </section></a>
-          <% }) %>
-        <% } %>
-      </main>
+  <header class="profil">
+    <h1 class="welcome"> Hallo <%= name %></h1>
+    <a href="/logout" class="logout"><i id="logout_btn" class="fas fa-sign-out-alt"></i></a>
+    </header> 
+    <section class="safe_recept">
+      <div class="favorite_icon">
+        <a class="profil" href="/profil"><i class="fas fa-user"></i></a>
+        <h1 class="title_icons">profil</h1>
+    </div>
+      <div class="favorite_icon">
+          <a class="recept" href="/search"><i class="fas fa-utensils"></i></a>
+          <h1 class="title_icons">Recept</h1>
+      </div>
+      <div class="favorite_icon">
+          <a class="favorite" href="/favorite"><i class="fas fa-heart"></i></a>
+          <h1 class="title_icons">Favorite</h1>
+      </div>
+      <div class="favorite_icon">
+          <a class="list" href="/shoppinglist"><i class="fas fa-clipboard-list"></i></a>
+          <h1 class="title_icons">Shopping list</h1>
+      </div>
+  </section>
 </body>
 </html>

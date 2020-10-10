@@ -3,12 +3,19 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 const superagent = require('superagent');
 const cookieParser = require('cookie-parser');
+const session = require('express-session');
 const app = express();
 
 dotenv.config({ path: './.env'});
 
 const db = require('./database/db');
 const apiKey = 'd2ffe67642074c13a6e8391bd4a4c0f8';
+
+app.use(session({
+	secret: 'secret',
+	resave: true,
+	saveUninitialized: true
+}));
 
 app.use(express.static('public'))
 

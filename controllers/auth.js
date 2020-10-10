@@ -2,7 +2,10 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const db = require('../database/db');
 
-  exports.login = async(req,res)=> {
+//USERNAME : WDD319
+//PASSWORD: 1234
+
+exports.login = async(req,res)=> {
       try {
         const {username, password} = req.body;
 
@@ -12,6 +15,8 @@ const db = require('../database/db');
             })
         }
         db.query('SELECT * FROM users WHERE username = ?', [username], async (error, results) => {
+            req.session.loggedin = true;
+			req.session.username = username;
             if ( !results || !(await bcrypt.compare(password, results[0].password) )){
             res.status(401).render('login', {
                 'message': 'Username or Password is incorrect'

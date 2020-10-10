@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('./partials/head.ejs') %>
+<head>
+  <%- include('./partials/head.ejs') %>
+</head>
 <body>
     <header class="profil">
-    <h1 class="welcome"> Willkommen <%= name %></h1>
-    <a href="/logout" class="logout"><i id="logout_btn" class="fas fa-sign-out-alt"></i></a>
+        <h1 class="welcome">Hallo <%= name %></h1>
+        <a href="/logout" class="logout"><i id="logout_btn" class="fas fa-sign-out-alt"></i></a>
     </header>
     <section class="safe_recept">
         <div class="favorite_icon">

@@ -49,10 +49,6 @@ header .navi.sticky .firmen_name {
 	list-style: none;
 	position: relative;
 }
-
-ul li a:hover {
-	color: #E31B6D;
-}
 .navi ul li a {
 	position: relative;
 	margin: 0 50px;
@@ -149,6 +145,7 @@ h3{
 }
 #checks {
 	display: flex;
+	flex-direction: column;
 	margin-top: 1em;
 	margin-bottom: 1em;
 	border: none;
