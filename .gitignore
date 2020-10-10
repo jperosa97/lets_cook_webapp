@@ -1,6 +1,15 @@
+# node.js #
 node_modules
+
+# vscode #
 .vscode
 
+# .env #
 .env
 
+# Datenbank verbindung #
 database
+
+# package-lock.json, package.json #
+package-lock.json
+package.json
