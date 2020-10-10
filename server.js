@@ -1,29 +1,13 @@
 const express = require('express');
 const cors = require('cors');
-const mysql = require("mysql");
 const dotenv = require('dotenv');
 const superagent = require('superagent');
 const cookieParser = require('cookie-parser');
-const methodOverride = require('method-override');
 const app = express();
 
 dotenv.config({ path: './.env'});
 
-const db = mysql.createConnection({
-  host: process.env.DATABASE_HOST,
-  user: process.env.DATABASE_USER,
-  password: process.env.DATABASE_PASSWORD,
-  database: process.env.DATABASE
-});
-
-db.connect((error) =>{
-  if(error) {
-    console.log(error)
-  }else {
-     console.log("MYSQL Connected..")
-  }
-})
-
+const db = require('./database/db');
 const apiKey = 'd2ffe67642074c13a6e8391bd4a4c0f8';
 
 app.use(express.static('public'))

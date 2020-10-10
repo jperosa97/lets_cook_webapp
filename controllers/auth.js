@@ -1,12 +1,6 @@
-const mysql = require("mysql");
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
-const db = mysql.createConnection({
-    host: process.env.DATABASE_HOST,
-    user: process.env.DATABASE_USER,
-    password: process.env.DATABASE_PASSWORD,
-    database: process.env.DATABASE
-  });
+const db = require('../database/db');
 
   exports.login = async(req,res)=> {
       try {
@@ -14,13 +8,13 @@ const db = mysql.createConnection({
 
         if(!username || !password){
             return res.status(400).render('login', {
-                'message': ' Please provide an email and password'
+                'message': ' Please provide an username and password'
             })
         }
         db.query('SELECT * FROM users WHERE username = ?', [username], async (error, results) => {
             if ( !results || !(await bcrypt.compare(password, results[0].password) )){
             res.status(401).render('login', {
-                'message': 'Email or Password is incorrect'
+                'message': 'Username or Password is incorrect'
             })
         } else {
             const id = results[0].id;
@@ -38,7 +32,7 @@ const db = mysql.createConnection({
             }
 
             res.cookie('jwt', token, cookieOptions);
-            res.status(200).redirect("/profil", {"username": username});
+            res.status(200).redirect("/profil");
         }
   })
   }catch (error) {

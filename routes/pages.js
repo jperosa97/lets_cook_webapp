@@ -1,5 +1,4 @@
 const express = require('express');
-
 const router = express.Router();
 
 router.get('/',(req, res) =>{
@@ -28,7 +27,7 @@ router.get('/logout', (req,res)=>{
     res.redirect('/login');
   });
 router.get('/profil', (req, res) => {
-    res.render('profil')
+    res.render('profil', {name: 'janick'})
 });
 
 module.exports = router;
