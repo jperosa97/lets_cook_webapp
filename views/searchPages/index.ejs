@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs') %>
+<body>
+    <header>
+      <%- include('../partials/navi.ejs') %>
+        <img id="title_bild" src="/assets/images/hintergrundbild.jpg" alt="">
+        <p class="info_text">Alles schmeckt besser, wenn es selbst gemacht wird, 
+            also let's Cook.
+        </p>
+    </header>
+    <div class="container">
+         <h1 class="title_rezepte">Schnelle Rezepte finden</h1>
+    </div>
+    <section class="randomeRezept">
+             <form class="search-form" action="/breakfast" method="POST">
+            <button id="searchButton1" type="submit">Frühstück
+                <img class="img" src="/assets/images/breakfast.jpg" alt="">
+            </button>
+        </form>
+        <form class="search-form" action="/appetizer" method="POST">
+            <button id="searchButton1" type="submit">Apéro
+                <img src="/assets/images/apero.jpg" alt="">
+            </button>
+        </form>
+        <form class="search-form" action="/mainCourse" method="POST">
+            <button id="searchButton1" type="submit">Abendessen
+                <img src="/assets/images/abendessen.jpg" alt="">
+            </button>
+        </form>
+        <form class="search-form" action="/dessert" method="POST">
+            <button id="searchButton1" type="submit">Dessert
+                <img src="/assets/images/dessert.jpg" alt="">
+            </button>
+        </form>
+    </section>
+
+    <div class="container">
+        <h1 class="title_rezepte">Rezepte aus fernen Ländern</h1>
+   </div>
+    <section class="spezifischeSuche">
+        <form class="search-form" action="/italien_food" method="POST">
+            <button id="searchButton1" type="submit">Italian Food
+                <img class="img" src="/assets/images/tortellini_italienFood.jpg" alt="">
+            </button>
+        </form>
+        <form class="search-form" action="/indian_food" method="POST">
+            <button id="searchButton1" type="submit">Indian Food
+                <img src="/assets/images/indian_curry.jpg" alt="">
+            </button>
+        </form>
+        <form class="search-form" action="/american_food" method="POST">
+            <button id="searchButton1" type="submit">American Food
+                <img src="/assets/images/burger_american_food.jpg" alt="">
+            </button>
+        </form>
+        <form class="search-form" action="/greek_food" method="POST">
+            <button id="searchButton1" type="submit">Greek Food
+                <img src="/assets/images/hummus_falafel_greekFood.jpg" alt="">
+            </button>
+        </form>
+    </section>
+    <section class="spezifischeSuche">
+
+    <form class="search-form" action="/japan_food" method="POST">
+            <button id="searchButton1" type="submit">Japan Food
+                <img class="img" src="/assets/images/sushi_japan_food.jpg" alt="">
+            </button>
+        </form>
+        <form class="search-form" action="/mexican_food" method="POST">
+            <button id="searchButton1" type="submit">Mexican Food
+                <img src="/assets/images/mexican_food_Wrap.jpg" alt="">
+            </button>
+        </form>
+        <form class="search-form" action="/spain_food" method="POST">
+            <button id="searchButton1" type="submit">Spain Food
+                <img src="/assets/images/paella_spainFood.jpg" alt="">
+            </button>
+        </form>
+        <form class="search-form" action="/thai_food" method="POST">
+            <button id="searchButton1" type="submit">Thai Food
+                <img src="/assets/images/thai_food_padtahi.jpg" alt="">
+            </button>
+        </form>
+
+
+    </section>
+    
+   <script src="/js/code.js"></script>
+</body>
+</html>

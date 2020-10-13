@@ -8,9 +8,9 @@ const db = require('../database/db');
 exports.login = async(req,res)=> {
       try {
         const {username, password} = req.body;
-
+        let cookie = req.cookies.userID ? req.cookies.userID : '';
         if(!username || !password){
-            return res.status(400).render('login', {
+            return res.status(400).render('profil_login/login', {
                 'message': ' Please provide an username and password'
             })
         }
@@ -18,7 +18,7 @@ exports.login = async(req,res)=> {
             req.session.loggedin = true;
 			req.session.username = username;
             if ( !results || !(await bcrypt.compare(password, results[0].password) )){
-            res.status(401).render('login', {
+            res.status(401).render('profil_login/login', {
                 'message': 'Username or Password is incorrect'
             })
         } else {
@@ -55,7 +55,7 @@ exports.register = (req, res) => {
            console.log(error);
        }
        if(results.length > 0) {
-           return res.render('register', {
+           return res.render('profil/register', {
                'message': 'That email has already in use'
            })
         }else if (password !== passwordConform){
@@ -71,7 +71,7 @@ exports.register = (req, res) => {
                 console.log(error);
             } else{
                 console.log(results);
-                return res.render('register', {
+                return res.render('profil_login/register', {
                     'message': 'User registered' 
                 })
             }

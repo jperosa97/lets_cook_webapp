@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('./partials/head.ejs') %>
+  <%- include('../partials/head.ejs') %>
   <body>
     <main id="detailsMain">
 
@@ -30,7 +30,11 @@
         <% } %>
         <% if (saved) { %>
           <form action="/recipe/<%= details.recipe_id %>" method="post">
-            <input type="hidden" name="_method" value="delete">
+            <button type="hidden" name="_method" class="submit" value="delete">
+              <div class="like">
+                <i class="fas fa-heart" aria-hidden="true"></i>
+              </div> 
+            </button>
             <input type="submit" class="submit" value="Delete Recipe">
           </form>
         <% } %>

@@ -3,31 +3,31 @@ const router = express.Router();
 
 
 router.get('/',(req, res) =>{
-    res.render('index');
+    res.render('searchPages/index');
 });
 router.get('/search', (req, res) => {
-    res.render('search')
-});
-router.get('/ueberUns', (req, res) => {
-    res.render('ueberUns', {'cookie': cookie})
-});
-router.get('/register',(req, res) =>{
-    res.render('register');
+    res.render('searchPages/search')
 });
 
-router.get('/favorite',(req, res) =>{
+router.get('/shoppinglist',(req, res) =>{
     if (req.session.loggedin) {
-        res.render('favorite', {name: req.session.username});
+        res.render('searchPages/shoppinglist', {name: req.session.username});
     }else {
 		res.send('Please login to view this page!');
 	}
 	res.end();
 });
-   
 
-router.get('/shoppinglist',(req, res) =>{
+router.get('/ueberUns', (req, res) => {
+    res.render('profil_login/ueberUns')
+});
+router.get('/register',(req, res) =>{
+    res.render('profil_login/register');
+});
+
+router.get('/saved',(req, res) =>{
     if (req.session.loggedin) {
-        res.render('shoppinglist', {name: req.session.username});
+        res.render('profil_login/saved', {name: req.session.username});
     }else {
 		res.send('Please login to view this page!');
 	}
@@ -35,12 +35,12 @@ router.get('/shoppinglist',(req, res) =>{
 });
    
 router.get('/login', (req, res) => {
-    res.render('login');
+    res.render('profil_login/login');
 });
 
 router.get('/profil', (req, res) => {
     if (req.session.loggedin) {
-        res.render('profil', {name: req.session.username});
+        res.render('profil_login/profil', {name: req.session.username});
     }else {
 		res.send('Please login to view this page!');
 	}

@@ -4,7 +4,7 @@ node_modules
 # vscode #
 .vscode
 
-# .env #
+# dotenv environment variables file
 .env
 
 # Datenbank verbindung #

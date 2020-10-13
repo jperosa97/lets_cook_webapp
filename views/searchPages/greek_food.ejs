@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head.ejs') %>
+  <body>
+    <main id="resultsPage"> 
+      <a href="/search" class="backTo_search">
+          <i class="fas fa-arrow-left"></i>
+        </a>
+      <h2 id="pageTitle">Greek Result</h2>
+      <% searchResults.forEach(result => { %>
+        <a href="/recipe/<%= result.recipe_id %>">
+          <section id= "results" recipe_id="<%= result.recipe_id %>" class="search_recipe">
+            <img class="details_image" src="<%= result.image_url %>"/>
+          <h3 id="search_name"> <%= result.name %> </h3> 
+        </section></a>
+      <% }) %>
+    </main>
+</body>
+</html>

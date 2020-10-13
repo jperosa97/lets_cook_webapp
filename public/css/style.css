@@ -13,6 +13,7 @@ header .info_text {
     font-size: 45px;
 }
 
+
 #details h4 {
 	margin: 5px;
 	text-align: center;
@@ -29,7 +30,7 @@ header .info_text {
 	border: solid burlywood 5px;
 	border-radius: 5px;
 	margin: 15px;
-  }
+}
   #recipe-ingredients h5 {
 	font-size: 25px;
   }
@@ -38,6 +39,8 @@ header .info_text {
 	padding: 15px;
 	background-color: rgba(0, 0, 0, .28);
 	margin: 15px;
+	height: auto;
+	width: 50vw;
   }
   
   #recipe-instructions h4 {
@@ -58,18 +61,18 @@ header .info_text {
   }
   
   .steps h5 {
-	position: relative;
-	display: flex;
-	padding: 10px;
-	max-width: 30px;
-	justify-content: center;
-	align-content: center;
-	margin-bottom: 10px;
-	font-size: 1.7rem;
-	background-color: rgba(150, 150, 150, .8);
-	border-radius: 50%;
-  }
-  
+    position: relative;
+    display: flex;
+    max-width: 30px;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 10px;
+    font-size: 25px;
+    background-color: rgba(150, 150, 150, .8);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
   .steps p {
 	line-height: 1.2;
   }
@@ -87,19 +90,61 @@ header .info_text {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: white;
+	color: white;
+	height: 100vh;
 }
 
 .randomeRezept{ 
-	height: 200vh;
-	width: 100%;
-	position: absolute;
-	top: 60em;
-	
+  height: 35vh;
+  width: 100%;
+  display: flex;
+  margin-top: 4em;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
-.randomeRezept h1 {
+.randomeRezept img{ 
+  width: 250px;
+  border-radius: 10px;
+}
+
+.container .title_rezepte {
 	color: #f1f2f6;
 	display: flex;
-	justify-content: center;
+  justify-content: center;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+
+#searchButton1 {
+  background-color: rgba(241,242,246, 0.4);
+  font-size: 20px;
+  color: #f1f2f6;
+  border-radius: 10px;
+  border-style: none;
+  position: relative;
+  padding: 8px;
+  outline: none;
+  cursor: pointer;
+  width: 18vw;
+}
+
+#searchButton1:hover {
+	background-color: rgba(0,148,50, 0.4);
+  color: #f1f2f6;
+}
+
+.spezifischeSuche {
+  height: 30vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.spezifischeSuche img{ 
+  width: 250px;
+  height: 150px;
+  border-radius: 10px;
 }
