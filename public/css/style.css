@@ -1,19 +1,3 @@
-header #title_bild {
-    width: 100%;
-    height: 860px;
-    opacity: 56%;
-}
-header .info_text {
-    position: absolute;
-    top: 7em;
-    left: 3em;
-    height: 10%;
-    width: 30%;
-    color: #F1F2F6;
-    font-size: 45px;
-}
-
-
 #details h4 {
 	margin: 5px;
 	text-align: center;
@@ -32,7 +16,8 @@ header .info_text {
 	margin: 15px;
 }
   #recipe-ingredients h5 {
-	font-size: 25px;
+  font-size: 25px;
+  padding: 1px;
   }
   
   #recipe-instructions {
@@ -40,7 +25,7 @@ header .info_text {
 	background-color: rgba(0, 0, 0, .28);
 	margin: 15px;
 	height: auto;
-	width: 50vw;
+	width: auto;
   }
   
   #recipe-instructions h4 {
@@ -108,6 +93,38 @@ header .info_text {
   border-radius: 10px;
 }
 
+
+@media all and (max-width: 1026px) {
+  .randomeRezept img {
+    width: 225px;
+  }
+  .randomeRezept {
+    margin-left: 21px;
+  }
+}
+@media all and (max-width: 770px) {
+  .randomeRezept img {
+    width: 170px;
+  }
+  }
+  @media all and (max-width: 427px) {
+    .randomeRezept{
+      display: inline-block;
+      width: 85%;
+      height: 40vh;
+      margin-left: 10em;
+      margin-top: -1em;
+    }
+  .search-form {
+    width: 30%;
+        height: 55%;
+        margin-bottom: 15px;
+    }
+    .container {
+      margin-top: 11em;
+    }
+  }
+
 .container .title_rezepte {
 	color: #f1f2f6;
 	display: flex;
@@ -142,9 +159,86 @@ header .info_text {
   flex-direction: row;
   justify-content: space-around;
 }
-
 .spezifischeSuche img{ 
   width: 250px;
   height: 150px;
   border-radius: 10px;
 }
+.spezifischeSuche1 {
+  height: 30vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.spezifischeSuche1 img{ 
+  width: 250px;
+  height: 150px;
+  border-radius: 10px;
+}
+@media all and (max-width: 1026px) {
+  #searchButton1 {
+  width: 24vw;
+}
+  .spezifischeSuche {
+  margin-left: 21px;
+}
+.spezifischeSuche img {
+  width: 225px;
+  }
+  .spezifischeSuche1 {
+    margin-left: 21px;
+  }
+  .spezifischeSuche1 img {
+    width: 225px;
+    }
+}
+@media all and (max-width: 770px) {
+.spezifischeSuche img {
+  width: 170px;
+}
+.spezifischeSuche1 img {
+  width: 170px;
+}
+
+}
+@media all and (max-width: 427px) {
+  .spezifischeSuche {
+    display: inline-block;
+      width: 85%;
+      height: 45vh;
+      margin-left: 10em;
+      margin-top: -1em;
+  }
+  .spezifischeSuche1 {
+    display: inline-block;
+      width: 85%;
+      height: 45vh;
+      margin-left: 10em;
+      margin-top: 11em;
+  }
+  #searchButton1 {
+  width: 46vw;
+}
+
+}
+
+@media all and (max-width: 377px) {
+  #searchButton1 {
+    width: 50vw;
+}
+.container .title_rezepte {
+  width: 400px;
+}
+}
+
+@media all and (max-width: 322px) {
+  #searchButton1 {
+    width: 60vw;
+    margin-left: -2em;
+}
+.container .title_rezepte {
+  width: 400px;
+}
+}
+

@@ -40,9 +40,7 @@ header .navi.sticky .firmen_name {
 }
 
 .navi ul {
-	position: relative;
 	display: flex;
-	justify-content: center;
 	align-items: center;
 }
 .navi ul li {
@@ -59,7 +57,96 @@ header .navi.sticky .firmen_name {
 header .navi .firmen_name{
     color: #F1F2F6;
 }
+header #title_bild {
+    width: 98.8vw;
+    height: 860px;
+    opacity: 56%;
+}
+header .info_text {
+    position: absolute;
+    top: 7em;
+    left: 3em;
+    height: 10%;
+    width: 30%;
+    color: #F1F2F6;
+    font-size: 45px;
+}
+.navi .toggle {
+    display: none;
+    position: absolute;
+    right: 16vw;
+    top: 15px;
+    color: #fff;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 55px;
+}
 
+
+
+@media all and (max-width: 1026px) {
+	header .navi {
+		width: 105vw;
+	}
+	header #title_bild {
+		width: 104vw;
+		height: 799px;
+	}
+	header .info_text {
+		width: 40%;
+		font-size: 35px;
+	}
+	
+}
+@media all and (max-width: 770px) {
+	.navi {
+        padding: 0 0;
+    }
+    .navi ul {
+        width: 1180px;
+        top: 36px;
+        display: none;
+        background: none;
+        box-shadow: none;
+    }
+    .navi .toggle {
+        display: block;
+    }
+    
+    .navi ul.active {
+		display: block;
+		
+	}
+    .navi ul li a {
+        margin: 0;
+        display: block;
+        text-align: center;
+        background: rgb(0, 0, 0, .5);
+	}
+	header #title_bild {
+		width: 108vw;
+	}
+  }
+  @media all and (max-width: 427px) {
+	header #title_bild {
+		width: 122vw;
+		height: 84vh;
+	}
+	header .info_text {
+		width: 72%;
+		font-size: 25px;
+	}
+  }
+
+@media (max-width: 377px){
+header #title_bild {
+    width: 134vw;
+}
+.navi ul li a {
+	width: 200px;
+	top: 3em;
+}
+}
 .jumbotron {
 display: flex;
 justify-content: center;
@@ -68,7 +155,11 @@ height: 60vh;
 align-items: center;
 
 }
-
+.container_title {
+	display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 #search-term.form-control {
     background-color: rgba(241,242,246, 0.4);
     font-size: 20px;
@@ -111,22 +202,12 @@ h3{
 #search-icon {
 	font-size: 20px;
 }
-.backTo {
-    color: #f1f2f6;
-    font-size: 30px;
-    position: absolute;
-    display: flex;
-    width: 45%;
-    height: 10%;
-    align-items: center;
-}
+
 .backTo_search {
 	color: #f1f2f6;
     font-size: 30px;
-    position: absolute;
     display: flex;
-    width: 45%;
-    justify-content: center;
+    margin-top: 16px;
 }
 .details_image {
 	margin: 30px auto;
@@ -192,7 +273,15 @@ h3{
 		flex-direction: column;
 		align-items: center;
   }
-	
+  @media all and (max-width: 1026px) {
+	#searchPage {
+		top: 7em;
+	}
+	.details_image {
+		max-width: 300px;
+	}
+}
+
 	#searchButton {
 	  background-color: rgba(241,242,246, 0.4);
 	  font-size: 20px;
@@ -241,6 +330,7 @@ h3{
     width: 26vw;
     height: 18em;
 }
+
 .submit {
 	border:  none;
 	cursor: pointer;
@@ -270,9 +360,22 @@ h3{
 		transform: rotate(360deg) scale(1);
 	}
 
+} 
+@media all and (max-width: 1026px) {
+	#random {
+		width: 17vw;
+	}
+	#searchButton {
+		width: 17vw;
+	}
+	.like {
+		top: 248px;
+		left: 19em;
+	}
 }
 
-  #search_name {
+
+#search_name {
 	position: relative;
 	top: -93px;
 	width: 80%;
@@ -280,13 +383,91 @@ h3{
 	background-color: rgba(247, 56, 89, .8);
 	border-radius: 5px;
 	overflow: hidden;
-  
   }
-  
-  #pageTitle {
-	font-size: 1.8rem;
-	display: flex;
-	justify-content: center;
-	margin-left: -6em;
-	color: #f1f2f6;
-  }
+@media all and (max-width: 1026px) {
+	#resultsPage {
+	margin-left: 4em;
+	}
+	#search_name {
+		width: 98%;
+	}
+	#results {
+		display: inline-block;
+		width: 30vw;
+		height: 18em;
+	}
+}
+
+ #pageTitle {
+    font-size: 1.8rem;
+    margin-left: 1em;
+    color: #f1f2f6;
+}
+
+
+  @media all and (max-width: 770px){
+#random {
+    width: 22vw;
+}
+#results {
+    width: 44vw;
+}
+#search_name {
+	width: 89%;
+}
+.like {
+    left: 15em;
+}
+
+}
+@media all and (max-width: 427px){
+	#searchPage {
+		top: 7em;
+		left: -3em;
+	}
+	#searchButton {
+		width: 42vw;
+		left: 70px;
+	}
+
+	#random {
+		width: 63vw;
+		left: 2em;
+	}
+	#searchPage {
+		left: -5em;
+	}
+	.like {
+		left: 10em;
+	}
+}
+@media all and (max-width: 377px){
+	#random {
+		width: 45vw;
+	}
+	#search_name {
+		width: 117%;
+	}
+	#results {
+    width: 68vw;
+    margin-left: -2em;
+}
+.like {
+left: 298px;
+top: 249px;
+}
+
+}
+
+@media all and (max-width: 322px) {
+	#results {
+		width: 68vw;
+		margin-left: -51px;
+	}
+	#search_name {
+		width: 137%;
+	}
+	.like {
+		left: 271px;
+	}
+}

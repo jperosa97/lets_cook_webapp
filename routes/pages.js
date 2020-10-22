@@ -11,16 +11,17 @@ router.get('/search', (req, res) => {
 
 router.get('/shoppinglist',(req, res) =>{
     if (req.session.loggedin) {
-        res.render('searchPages/shoppinglist', {name: req.session.username});
+        res.render('profil_login/shoppinglist', {name: req.session.username});
     }else {
 		res.send('Please login to view this page!');
 	}
 	res.end();
 });
 
-router.get('/ueberUns', (req, res) => {
-    res.render('profil_login/ueberUns')
+router.get('/login', (req, res) => {
+    res.render('profil_login/login');
 });
+
 router.get('/register',(req, res) =>{
     res.render('profil_login/register');
 });
@@ -34,10 +35,6 @@ router.get('/saved',(req, res) =>{
 	res.end();
 });
    
-router.get('/login', (req, res) => {
-    res.render('profil_login/login');
-});
-
 router.get('/profil', (req, res) => {
     if (req.session.loggedin) {
         res.render('profil_login/profil', {name: req.session.username});
@@ -47,6 +44,9 @@ router.get('/profil', (req, res) => {
 	res.end();
 });
 
+router.get('/ueberUns', (req, res) => {
+    res.render('profil_login/ueberUns')
+});
 // LOGOUT
 router.get('/logout', (req,res)=>{
     //session destroy

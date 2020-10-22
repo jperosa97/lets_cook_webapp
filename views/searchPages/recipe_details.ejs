@@ -3,11 +3,13 @@
   <%- include('../partials/head.ejs') %>
   <body>
     <main id="detailsMain">
-
+    <div class="container_title">
+      <a href="/search" class="backTo_search">
+          <i class="fas fa-arrow-left"></i>
+        </a>
       <h2><%= details.name %></h2>
-      <a href="/search" class="backTo">
-        <i class="fas fa-arrow-left"></i>
-      </a>
+    </div>
+     
       <img class="details_image" src="<%= details.image %>"> 
 
       </img>
@@ -21,7 +23,7 @@
             <input type="hidden" id="image" name="image_url" value="<%= details.image %>">
             <input type="hidden" id="time" name="time" value="<%= details.time %>">
             <input type="hidden" id="servings" name="servings" value="<%= details.servings %>">
-            <button type="submit" class="submit">
+            <button type="submit" class="submit"  value="Save Recipe">
               <div class="like">
                 <i class="fas fa-heart" aria-hidden="true"></i>
               </div> 

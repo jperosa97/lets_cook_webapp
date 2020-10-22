@@ -43,5 +43,59 @@
 	width: 12vw;
 	height: 20vh;
 	margin-left: 5em;
+}
+@media all and (max-width: 1026px) {
+	.ueberUns {
+		top: 11em;
+	}
+	.ueberUns p {
+		width: 45vw;
+		left: 20em;
+		top: 2em;
+	}
+	.ueberUns main .logo {
+		width: 12vw;
+		height: 15vh;
+	}
+}
 
+@media (max-width: 770px){
+.ueberUns p {
+    width: 57vw;
+    left: 12em;
+    top: 2em;
+}
+.ueberUns main .logo {
+    width: 12vw;
+    height: 13vh;
+}
+
+}
+
+@media (max-width: 427px){
+	.ueberUns p {
+		width: 84vw;
+		left: 3em;
+	}
+	.ueberUns main .logo {
+		width: 23vw;
+	}
+	.ueberUns main #icons {
+		width: 26%;
+	}
+}
+
+@media (max-width: 377px){
+
+	.ueberUns main {
+		margin-top: 8em;
+		margin-left: -4em;
+	}
+}
+
+@media (max-width: 322px){
+	.ueberUns main .logo {
+		width: 23vw;
+		height: 10vh;
+	}
 }

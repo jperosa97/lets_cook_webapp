@@ -5,31 +5,6 @@
     left: 34em;
     font-size: 20px;
 }
-
-.navi ul {
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.navi ul li {
-	list-style: none;
-	position: relative;
-}
-
-ul li a:hover {
-	color: #E31B6D;
-}
-.navi ul li a {
-	position: relative;
-	margin: 0 50px;
-	font-size: 27px;
-	text-decoration: none;
-	color: #F1F2F6;
-}
-header .navi .firmen_name{
-    color: #F1F2F6;
-}
 header .title_bild {
     width: 100%;
     height: 854px;
@@ -45,17 +20,7 @@ header h2 {
     color: #F1F2F6;
     font-size: 45px;
 }
-header form {
-	position: absolute;
-	display: flex;
-	flex-direction: column;
-    top: 5em;
-    left: 15em;
-    height: 10%;
-    width: 30%;
-    color: #F1F2F6;
-    font-size: 45px;
-}
+
 header form .usn-style label {
     position: absolute;
     top: 2em;
@@ -215,4 +180,37 @@ header form .button .btn_regi:hover{
 
 section{
     height: 900px;
+}
+
+
+
+@media all and (max-width: 770px) {
+	header form .email-style input {
+		width: 85%;
+	}
+	header form .pwd-style input {
+		width: 85%;
+	}
+	header form .pwd-style2 input{
+		width: 85%;
+	}
+	header form .pwd-style2 label {
+		font-size: 28px;
+	}
+
+}
+@media all and (max-width: 427px) {
+	header form .email-style input {
+		width: 150px;
+	}
+	header form .pwd-style input {
+		width: 150px;
+	}
+	header form .pwd-style2 input{
+		width: 150px;
+	}
+	header form .pwd-style2 label {
+		width: 150px;
+	}
+
 }

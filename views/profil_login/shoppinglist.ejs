@@ -5,11 +5,13 @@
 </head>
 <body>
     <header class="profil">
-        <h1 class="welcome">Hallo <%= name %></h1>
+        <h1 class="welcome">Deine Shoppinglist <%= name %></h1>
         <a href="/logout" class="logout"><i id="logout_btn" class="fas fa-sign-out-alt"></i></a>
     </header>
     <section class="safe_recept">
         <%- include('../partials/profil_navi.ejs') %>
+
+        
     </section>
 </body>
 </html>

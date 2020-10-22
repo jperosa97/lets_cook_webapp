@@ -15,8 +15,6 @@ const client = new pg.Client(process.env.DATABASE_URL);
 
 const apiKey = 'd2ffe67642074c13a6e8391bd4a4c0f8';
 
-
-
 app.use(session({
 	secret: 'secret',
 	resave: true,
@@ -171,7 +169,7 @@ function americanSearch(req, res) {
   .catch(error => handleError(error, res));
 };
 
-//schnelle grichische rezepte suchen
+//schnelle griechische rezepte suchen
 function greekSearch(req, res) {
   let url = `https://api.spoonacular.com/recipes/complexSearch?number=12&cuisine=Greek&apiKey=${apiKey}`;
 
@@ -302,7 +300,7 @@ function saveRecipe(req, res) {
   let values = [req.params.id, image_url, name, time, servings, userID, Date.now()];
 
   if(isNaN(userID)) {
-    res.render('profil/login', {'message': 'You must be signed in to save recipes.', 'cookie': ''})
+    res.render('profil_login/login', {'message': 'You must be signed in to save recipes.', 'cookie': ''})
   }
   else {
     client.query(SQL, values)
@@ -327,17 +325,17 @@ function getSaved(req, res) {
   let cookie = req.cookies.userID ? req.cookies.userID : '';
 
   if (!userID) {
-    res.render('profil/login', {'message': 'Sign In to Save Recipes', 'cookie': cookie, 'savedResults': ''});
+    res.render('profil_login/login', {'message': 'Sign In to Save Recipes', 'cookie': cookie, 'savedResults': ''});
   }
   else {
     let SQL = `SELECT recipe_id, image, name, time, servings FROM recipes WHERE user_id = ${userID} ORDER BY timestamp;`;
     client.query(SQL)
       .then(results => {
         if (results.rows[0]) {
-          res.render('profil/saved', {'savedResults': results.rows, 'cookie': cookie});
+          res.render('profil_login/saved', {'savedResults': results.rows, 'cookie': cookie});
         }
         else {
-          res.render('profil/saved', {'savedResults': '', 'cookie': cookie});
+          res.render('profil_login/saved', {'savedResults': '', 'cookie': cookie});
         }
       });
   }
