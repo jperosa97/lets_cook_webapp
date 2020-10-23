@@ -59,7 +59,6 @@ app.get('/random', randomRecipe);
 app.get('/saved', getSaved);
 
 
-
 function Result(result){
   this.recipe_id = result.id;
   this.image_url = `https://spoonacular.com/recipeImages/${result.id}-312x231.jpg`;
@@ -76,6 +75,7 @@ function Recipe(data, id){
   this.ingredients = data.extendedIngredients;
   this.steps = data.analyzedInstructions[0] ? data.analyzedInstructions[0].steps : [{'number': 0, 'step': 'Instructions Unavailable'}];
 }
+
 function handleError(error, response) {
   response.status(error.status || 500).send(error.message);
 }

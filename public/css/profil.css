@@ -42,7 +42,7 @@
     justify-content: center;
     background-color: #f1f2f6;
     border-radius: 22px 22px 22px 22px;
-    box-shadow: 0px 7px 9px 6px rgba(0,0,0,0.56);
+    box-shadow: 0 7px 9px 6px rgba(0,0,0,0.56);
     margin-left: 25px;
 }
 .favorite_icon .profil {
@@ -153,3 +153,58 @@
             font-size: 20px;
         }
     }
+
+.accordion {
+    max-width: 590px;
+    transform: translate(460px, 60px);
+    height: auto;
+}
+
+.accordion .contentBx {
+    position: relative;
+    margin: 10px 20px;
+}
+.accordion .contentBx .label {
+    position: relative;
+    padding: 14px;
+    background: #3498db;
+    color: #f1f2f6;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 20px;
+    box-shadow: 0 7px 9px 6px rgba(0,0,0,0.56);
+}
+
+.accordion .contentBx .label::before {
+    content: '+';
+    position: absolute;
+    top: 50%;
+    right: 60px;
+    transform: translateY(-50%);
+    font-size: 30px;
+}
+.accordion .contentBx .label .fa-trash::before {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+.accordion .contentBx.active .label::before{
+    content: '-';
+
+}
+.accordion .contentBx .content {
+    position: relative;
+    background: #f1f2f6;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    box-shadow: 0 7px 9px 0 rgba(0,0,0,0.56);
+}
+
+.accordion .contentBx.active .content {
+    height: auto;
+    padding: 10px;
+    border-radius: 20px;
+}

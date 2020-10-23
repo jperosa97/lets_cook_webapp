@@ -207,7 +207,12 @@ h3{
 	color: #f1f2f6;
     font-size: 30px;
     display: flex;
-    margin-top: 16px;
+}
+.backToSearch {
+	color: #f1f2f6;
+    font-size: 30px;
+	display: flex;
+	margin-top: 15px;
 }
 .details_image {
 	margin: 30px auto;
@@ -399,11 +404,11 @@ h3{
 }
 
  #pageTitle {
-    font-size: 1.8rem;
+	font-size: 1.8rem;
     margin-left: 1em;
     color: #f1f2f6;
+    text-align: center;
 }
-
 
   @media all and (max-width: 770px){
 #random {
