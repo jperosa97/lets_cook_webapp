@@ -1,3 +1,4 @@
+/*Reset*/
 * {
     margin: 0;
     padding: 0;
@@ -82,8 +83,7 @@ header .info_text {
     font-size: 55px;
 }
 
-
-
+/*Navigation Responsive*/
 @media all and (max-width: 1026px) {
 	header .navi {
 		width: 105vw;
@@ -340,6 +340,7 @@ h3{
 	border:  none;
 	cursor: pointer;
 }
+/*heart Icon und Animation*/
 .like {
 	color: #f1f2f6;
 	position: absolute;
@@ -366,6 +367,7 @@ h3{
 	}
 
 } 
+
 @media all and (max-width: 1026px) {
 	#random {
 		width: 17vw;

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--Header mit css und fonts und responsive navigation verlinkt-->
   <%- include('../partials/head.ejs') %>
 </head>
 <body>
@@ -9,8 +10,10 @@
         <a href="/logout" class="logout"><i id="logout_btn" class="fas fa-sign-out-alt"></i></a>
     </header>
     <section class="safe_recept">
+      <!--Navigation verlinkt vom Ordner partials-->
         <%- include('../partials/profil_navi.ejs') %>
     </section>
+    <!--Gespeicherte Rezepte anzeigen lassen-->
     <section class="accordion">
         <div class="contentBx">
             <div class="label">Burger Cake <i id="decrement" class="fas fa-trash"></i></div>

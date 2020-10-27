@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+    <!--Header mit css und fonts und responsive navigation verlinkt-->
     <%- include('../partials/head.ejs') %>
 <body>
     <header>
-      <%- include('../partials/navi.ejs') %>
+    <!--Navigation vom ordner partials verlinkt-->
+    <%- include('../partials/navi.ejs') %>
         <img id="title_bild" src="/assets/images/hintergrundbild.jpg" alt="">
         <p class="info_text">Alles schmeckt besser, wenn es selbst gemacht wird, 
             also let's Cook.
@@ -11,7 +13,8 @@
     </header>
     <div class="container">
          <h1 class="title_rezepte">Schnelle Rezepte finden</h1>
-    </div>
+    </div> 
+    <!--Eine Auswahl von spezifische Suchrezepte durch verschidene Mahlzeiten(man kann noch mehr Länder verlinken wenn man möchte )-->
     <section class="randomeRezept">
              <form class="search-form" action="/breakfast" method="POST">
             <button id="searchButton1" type="submit">Frühstück
@@ -35,10 +38,11 @@
         </form>
     </section>
 
+    <!--Eine Auswahl von spezifische Suchrezepte durch verschidene Länder(man kann noch mehr Länder verlinken wenn man möchte )-->
     <div class="container">
         <h1 class="title_rezepte">Rezepte aus fernen Ländern</h1>
    </div>
-    <section class="spezifischeSuche">
+  <section class="spezifischeSuche">
         <form class="search-form" action="/italien_food" method="POST">
             <button id="searchButton1" type="submit">Italian Food
                 <img class="img" src="/assets/images/tortellini_italienFood.jpg" alt="">
@@ -82,10 +86,8 @@
                 <img src="/assets/images/thai_food_padtahi.jpg" alt="">
             </button>
         </form>
-
-
     </section>
-    
+    <!--Javascript ordner verlinkt-->
    <script src="/js/code.js"></script>
 </body>
 </html>

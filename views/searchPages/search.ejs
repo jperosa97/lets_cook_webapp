@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+    <!--Header mit css und fonts und responsive navigation verlinkt-->
   <%- include('../partials/head.ejs') %>
 <body>
     <header>
-          <%- include('../partials/navi.ejs') %>
+      <!--Navigation verlinkt vom Ordner partials-->
+      <%- include('../partials/navi.ejs') %>
     </header>
       <main id="searchPage">
+          <!--Form Tag mit Input Feld wo man das Suchrezept rein schreibt und auch noch diversen 
+            Allergien oder Diäten spezifisch Suchen kann-->
         <form class="search-form" action="/result" method="post">
           <input class="textInput" type="text" name="search" placeholder="Search for Recipe" required>
           <fieldset id="checks">
             <div class="prefs">
+                <!--Spezifische Suche (Allergien oder Diäten)-->
               <h1>Allergien</h1>
             </div>
             <div class="filter">
@@ -42,11 +47,10 @@
          </fieldset>
           <button id="searchButton" type="submit">Search <i class="fas fa-search" id="search-icon"></i></button>
         </form>
+        <!--Form Tag für ein Random Rezept zu finden (Achtung es kann alles kommen. Zb. auch nicht vegane oder glutenfreie Rezepte)-->
         <form class="search-form" action="/random" method="GET">
           <button id="random" type="submit">Random Recipe!</button>
         </form>
       </main>
-  
-      </script>
 </body>
 </html>

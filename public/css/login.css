@@ -1,3 +1,4 @@
+/*Login formular*/
 header form {
 	position: absolute;
 	display: flex;
@@ -9,6 +10,7 @@ header form {
     color: #F1F2F6;
     font-size: 45px;
 }
+/*Login username label und Input*/
 header form .usn-style label {
     position: absolute;
     top: 2em;
@@ -28,7 +30,7 @@ header form .usn-style input {
     color: #1E272E;
     outline: none;
 }
-
+/*Login password label und Input*/
    header form .pwd1-style label {
 	position: absolute;
 	top: 6em;
@@ -47,6 +49,7 @@ header form .usn-style input {
 	   color: #1E272E;
 	   outline: none;
    }
+/*Login button mit hover effekt*/
 header form .button {
         display: flex;
         flex-direction: column;
@@ -111,7 +114,7 @@ header form .button .btn_regi:hover{
 	color: #1E272E;
 	background-color: rgba(241,242,246, 0.4);
 }
-
+/*Login Responsive*/
 @media all and (max-width: 1026px) {
 	header h2 {
 		font-size: 40px;

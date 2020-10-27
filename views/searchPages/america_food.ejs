@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!--Header mit css und fonts und responsive navigation verlinkt-->
   <%- include('../partials/head.ejs') %>
   <body>
     <main id="resultsPage"> 
@@ -7,6 +8,7 @@
           <i class="fas fa-arrow-left"></i>
         </a>
       <h2 id="pageTitle">American Result</h2>
+      <!--Anzeigen der Resultate von der spezifischen suche -->
       <% searchResults.forEach(result => { %>
         <a href="/recipe/<%= result.recipe_id %>">
           <section id= "results" recipe_id="<%= result.recipe_id %>" class="search_recipe">

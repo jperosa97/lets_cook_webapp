@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!--Header mit css und fonts und responsive navigation verlinkt-->
   <%- include('../partials/head.ejs') %>
   <body>
     <main id="detailsMain">
@@ -7,9 +8,10 @@
       <a href="/search" class="backToSearch">
           <i class="fas fa-arrow-left"></i>
         </a>
+        <!--Name von dem Rezept-->
       <h2><%= details.name %></h2>
     </div>
-     
+      <!--Bild von dem Rezept-->
       <img class="details_image" src="<%= details.image %>"> 
 
       </img>
@@ -17,6 +19,7 @@
         <h4>Ready In: <%= details.time %> minutes</h4>
         <h4>Serves: <%= details.servings %></h4>
         <a href="<%= details.source %>" target="_blank"><h4>Original Recipe Site</h4></a>
+        <!--Zeigt an ob ein Rezept gespeichert ist oder nicht-->
         <% if (!saved) { %>
           <form action="/recipe/<%= details.recipe_id %>" method="post">
             <input type="hidden" id="name" name="name" value="<%= details.name %>">
@@ -30,6 +33,7 @@
             </button>
           </form>
         <% } %>
+        <!--Zeigt an ob ein Rezept gespeichert ist oder nicht-->
         <% if (saved) { %>
           <form action="/recipe/<%= details.recipe_id %>" method="post">
             <button type="hidden" name="_method" class="submit" value="delete">
@@ -43,12 +47,14 @@
       </div>
       <section id="recipe-ingredients">
         <h4 class = "shoppingListHead">Ingredients:</h4>
+        <!--Zutaten Liste einzeigen von dem server.js script-->
         <% details.ingredients.forEach(ingr => { %>
         <h5><%= ingr.measures.us.amount %> <%= ingr.measures.us.unitShort %> <%= ingr.name %></h5>
         <% }) %>
       </section>
       <section id="recipe-instructions">
         <h4>Preparation Instructions:</h4>
+        <!--Rezept anleitung einzeigen von dem server.js script-->
         <% details.steps.forEach(step => { %>
         <div class="steps">
           <%if(details.steps.number !== 0) { %><h5><%= step.number %></h5><% } %>
@@ -58,6 +64,7 @@
       </section>
     </main>
     <script>
+      //Like Animation, wenn der user ein Rezept speichern möchte
       $(document).ready(function(){
         $(".like").click(function(){
           $(this).toggleClass("heart");

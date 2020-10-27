@@ -1,3 +1,4 @@
+/*Ueber uns*/
 .ueberUns {
 	display: flex;
 	flex-direction: column;
@@ -29,7 +30,7 @@
 	height: 20vh;
 	justify-content: center;
 }
-
+/*Ueber uns Icon download Icons*/
 .ueberUns main #icons {
 	width: 17%;
 }
@@ -38,12 +39,13 @@
 	width: 80%;
 	margin-left: 5em;
 }
-
+/*Ueber uns Logo*/
 .ueberUns main .logo {
 	width: 12vw;
 	height: 20vh;
 	margin-left: 5em;
 }
+/*Ueber uns Responsive*/
 @media all and (max-width: 1026px) {
 	.ueberUns {
 		top: 11em;

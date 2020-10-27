@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+      <!--Header mit css und fonts und responsive navigation verlinkt-->
     <%- include('../partials/head.ejs') %>
     <body>
         <header>
+        <!--Navigation verlinkt vom Ordner partials-->
           <%- include('../partials/navi.ejs') %>
         <img class="title_bild" src="/assets/images/lg_rg_bild.jpg" alt="">
         <h2>Registriere dich bei let's Cook</h2>
-        
+        <!--Error message anzeigen lassen-->
         <% if(typeof message!= "undefined" && message) { %>
             <h4 id="error"><%= message %></h2>
         <% } %>  
