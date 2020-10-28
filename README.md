@@ -6,16 +6,16 @@ Das ist mein Studenten Projekt, wo ich eine Webapp programmiere, meine App wird 
 
   - HTML
   - CSS
-  - JAVASCRIPT / ejs
+  - JAVASCRIPT
   - PHP
   
 # Api
 
-  - Spoonaculator
+  - Spoonaculator https://spoonacular.com/food-api
 
 
 
 # Framework
 
-  - node.js
+  - node.js / ejs
   
